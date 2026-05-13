@@ -1,0 +1,8 @@
+services:
+  calendar-bot:
+    build: .
+    container_name: calendar-notification-bot
+    env_file: .env
+    environment:
+      TZ: ${TZ:-Asia/Taipei}
+    restart: unless-stopped
